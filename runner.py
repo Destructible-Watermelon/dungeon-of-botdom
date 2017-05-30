@@ -1,4 +1,7 @@
-class RunAway:
+from base import BasePlayer
+
+
+class RunAway(BasePlayer):
 
     def __init__(self):
         self.cards = 13

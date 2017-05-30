@@ -1,4 +1,7 @@
-class DareDevilDumDum:
+from base import BasePlayer
+
+
+class DareDevilDumDum(BasePlayer):
     def start_turn(self, last_turn):
         return 1  # damn squiggles
 
