@@ -15,7 +15,7 @@ class RunAway(BasePlayer):
             return 1
 
     def play(self, card):
-        if self.cards > 11:
+        if self.cards > 11: # if it is the first turn
             choice = 5  # remove armour
         else:
             choice = 6  # put the card in the dungeon
@@ -23,7 +23,7 @@ class RunAway(BasePlayer):
         return choice
 
     def vorpal_choice(self, last_turn):
-        return 5  # without using more memory, this is the best choice statistically. avoid squiggles
+        return 5  # without using more memory, this is the best choice statistically
 
     def result(self, bot, result):
         self.cards = 13
