@@ -1,6 +1,6 @@
 ##########################################
 #                                        #
-#   +--------------------------------+   #
+#   +————————————————————————————————+   #
 #   |                                |   #
 #   |         the dungeon of         |   #
 #   |             botdom             |   #
@@ -9,13 +9,12 @@
 #   |  a king of the hill challenge  |   #
 #   |                                |   #
 #   |         - created by the lemon |   #
-#   +--------------------------------+   #
+#   +————————————————————————————————+   #
 #                                        #
 ##########################################
 
 
 import botclasses
-import random
 
 
 class IllegalPlayError(Exception):
@@ -27,7 +26,6 @@ class DungeonController:
     ROUNDS_TO_RESULT = 5
     GAMES = 1000
     # noinspection PyUnresolvedReferences
-    # now there are no annoying squiggly lines here
     import random
 
     # Items:
@@ -120,11 +118,12 @@ class DungeonController:
                     else:
                         break
         result = hp <= 0  # whether they failed
-        bots[index].result(0, result)  # tell the bot that they ventured into the dungeon, and whether they failed
+        bots[index].result(0, result, dungeon, vorped)  # tell the bot that they ventured into the dungeon
+        # whether they failed, and what was in the dungeon, and what the vorpal choice was
 
-        bots[not index].result(1, result)
+        bots[not index].result(1, result, dungeon, vorped)
         # tell the bot that the other ventured into the dungeon
-        # and whether they failed
+        # and whether they failed, and what was in the dungeon.
         return index, result
 
     def game(self, bot_first, bot_class0, bot_class1):

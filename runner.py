@@ -29,6 +29,6 @@ class RunAway(BasePlayer):
     def vorpal_choice(self, last_turn):
         return 5  # without using more memory, this is the best choice statistically
 
-    def result(self, bot, result):
+    def result(self, bot, result, dungeon, vorped):
         self.cards = 13
         self.armoured = True

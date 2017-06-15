@@ -11,5 +11,5 @@ class DareDevilDumDum(BasePlayer):
     def vorpal_choice(self, last_turn):
         return 9+last_turn*0  # dragon
 
-    def result(self, bot, result):
+    def result(self, bot, result, dungeon, vorped):
         pass  # we live for the thrill, not the result!

@@ -8,5 +8,5 @@ class BasePlayer:
     def vorpal_choice(self, last_turn):
         raise NotImplementedError
 
-    def result(self, bot, result):
+    def result(self, bot, result, dungeon, vorped):
         raise NotImplementedError
