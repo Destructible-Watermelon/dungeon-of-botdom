@@ -15,6 +15,7 @@
 
 
 import botclasses
+import random
 
 
 class IllegalPlayError(Exception):
