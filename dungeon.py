@@ -25,7 +25,7 @@ class IllegalPlayError(Exception):
 class DungeonController:
     BASE_DECK = (list(range(1, 6)) * 2) + [6, 7, 9]
     ROUNDS_TO_RESULT = 5
-    GAMES = 1000
+    GAMES = 400
     # noinspection PyUnresolvedReferences
     import random
 
