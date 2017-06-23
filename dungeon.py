@@ -110,7 +110,7 @@ class DungeonController:
                 pact_killing = False
             elif card == 7 and items[self.PACT]:
                 pact_killing = True
-            elif (not card % 2 == 0 and items[self.GRAIL]) and (card is not vorped):
+            elif (not (card % 2 == 0 and items[self.GRAIL])) and (card is not vorped):
                 hp -= card
                 if hp <= 0:
                     if items[self.POTION]:
